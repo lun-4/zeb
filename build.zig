@@ -6,6 +6,8 @@ pub fn build(b: *Builder) void {
     lib.setBuildMode(mode);
     lib.install();
 
+    lib.addPackagePath("hzzp", "hzzp/src/main.zig");
+
     var main_tests = b.addTest("src/main.zig");
     main_tests.setBuildMode(mode);
 
